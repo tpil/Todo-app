@@ -7,16 +7,10 @@ import { Container,Row,Col,Button } from 'react-bootstrap';
             super(props);
             this.state={
                 todoCompletion:this.props.completed,
-                
+                todoID:this.props.id
             }
         }
-       /* let completionCheck = () =>{
-            if (props.completed === true){
-                return {textDecoration:'line-through'}
-            }else{
-                return {textDecoration:'none'}
-        }
-*/
+
     toggleComplete = (e) =>{
         if (this.state.todoCompletion === false){
             this.setState({todoCompletion:true});
@@ -25,6 +19,11 @@ import { Container,Row,Col,Button } from 'react-bootstrap';
             this.setState({todoCompletion:false});
           
         }
+
+    }
+
+    deleteTodo = (e) =>{
+        console.log(`The item id is: ${this.state.todoID}`);
 
     }
     componentDidUpdate() {
@@ -46,7 +45,7 @@ import { Container,Row,Col,Button } from 'react-bootstrap';
                         </p>
                     </Col>
                     <Col >
-                        <Button className="delete-btn"variant="danger">Delete</Button>
+                        <Button className="delete-btn"variant="danger" onClick={this.deleteTodo}><i className="fas fa-trash-alt "></i></Button>
                     </Col>
                 </Row>
             </Container>
