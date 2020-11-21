@@ -13,4 +13,14 @@ a{
   color: blueviolet;
   text-decoration: none;
 }
+.App{
+  max-width:1140px;
+  margin:auto;
+  border:2px #f3f3f3 solid;
+ 
 
+}
+header{
+ background-color: blanchedalmond;
+  border-bottom:2px #c3c3c3 solid;
+}
