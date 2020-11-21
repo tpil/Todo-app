@@ -1,6 +1,6 @@
 import React,{Component} from 'react';
 
-import NewToDo from './components/NewToDo';
+import NewToDo from './components/addNewToDo';
 import TodoList from './components/TodoList';
 import './App.css';
 

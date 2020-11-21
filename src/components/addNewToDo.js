@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Button,Form } from 'react-bootstrap';
-class NewToDo extends Component {
+
+class addNewToDo extends Component {
     constructor(){
         super();
         this.state={}
@@ -24,4 +25,4 @@ class NewToDo extends Component {
         )
     }
 }
-export default NewToDo;
+export default addNewToDo;
