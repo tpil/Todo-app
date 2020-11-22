@@ -6,12 +6,6 @@ import PropTypes from 'prop-types'; //When we want to set a tpe that this list g
 
 
 class TodoList extends Component{
-        constructor(props){
-            super(props);
-            
-
-        }
-
    
    
            render(){
