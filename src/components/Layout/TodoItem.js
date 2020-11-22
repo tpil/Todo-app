@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import './TodoItem.css';
 import { Container,Row,Col,Button } from 'react-bootstrap';
+import PropTypes from 'prop-types'; //When we want to set a type that this item gets, We can also set is as required
 
  class TodoItem extends Component{
         constructor(props){
@@ -54,4 +55,9 @@ import { Container,Row,Col,Button } from 'react-bootstrap';
         );
     }
 }
+
+TodoItem.propTypes={
+    deleteTodo:PropTypes.func.isRequired
+}
+
 export default TodoItem;
