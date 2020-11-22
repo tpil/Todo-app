@@ -13,12 +13,12 @@ class TodoList extends Component{
             
             const todosArray = this.props.addTodo.map((todo)=>{
              
-                return <TodoItem key={todo.id} id={todo.id}  Todo={todo.item} completed={todo.completed} deleteTodo={this.props.deleteTodo}/>
+                return <TodoItem key={todo.id} id={todo.id}  Todo={todo.title} completed={todo.completed} deleteTodo={this.props.deleteTodo}/>
             
             })
 
                     return (
-                        <div className="list-container"style={{margin:'3px'}}>
+                        <div style={{margin:'3px'}}>
                             {todosArray}
                             
                         </div>
