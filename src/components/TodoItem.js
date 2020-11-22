@@ -22,10 +22,7 @@ import { Container,Row,Col,Button } from 'react-bootstrap';
 
     }
 
-    deleteTodo = (e) =>{
-        console.log(`The item id is: ${this.state.todoID}`);
-
-    }
+ 
     componentDidUpdate() {
       if (this.state.todoCompletion === true){
             return {textDecoration:"line-through"}
@@ -34,7 +31,10 @@ import { Container,Row,Col,Button } from 'react-bootstrap';
       }
 
     }
+
+  
     render(){
+       
         return (
         <Container>
                 <Row >
@@ -45,7 +45,8 @@ import { Container,Row,Col,Button } from 'react-bootstrap';
                         </p>
                     </Col>
                     <Col >
-                        <Button className="delete-btn"variant="danger" onClick={this.deleteTodo}><i className="fas fa-trash-alt "></i></Button>
+                    {/*pername ton event handle tou App.js me arrow funtion gia na to dei o parent kai deixnoyme to id pou prepeina diagrafei */}
+                        <Button className="delete-btn"variant="danger" onClick={()=>this.props.deleteTodo(this.state.todoID)}><i className="fas fa-trash-alt "></i></Button>
                     </Col>
                 </Row>
             </Container>

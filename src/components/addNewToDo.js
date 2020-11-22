@@ -4,8 +4,12 @@ import { Button,Form } from 'react-bootstrap';
 class addNewToDo extends Component {
     constructor(){
         super();
-        this.state={}
+        this.state={
+            inputTerm:''
+        }
     }
+
+    
     render() {
         return (
             <Form  style={{padding:'10px'}}>
@@ -15,7 +19,7 @@ class addNewToDo extends Component {
                     </Form.Group>
 
                     <Form.Group >
-                    <Button variant="primary" type="submit">
+                    <Button variant="primary" type="submit" >
                     <i className="fas fa-plus"></i> Add new Todo
                     </Button>
                     </Form.Group>
