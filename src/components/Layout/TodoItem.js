@@ -9,6 +9,7 @@ import PropTypes from 'prop-types'; //When we want to set a type that this item 
             this.state={
                 todoCompletion:this.props.completed,
                 todoID:this.props.id
+              
             }
         }
 
@@ -41,7 +42,7 @@ import PropTypes from 'prop-types'; //When we want to set a type that this item 
                 <Row >
                     <Col className="col-11">
                         <p className="TodoItem" >
-                        <input type="checkbox" onChange={this.toggleComplete}/>           
+                        <input type="checkbox" onChange={this.toggleComplete} />           
                         <span style={{paddingLeft:'10px'}}><b style={this.componentDidUpdate()}>{this.props.Todo}</b></span>
                         </p>
                     </Col>
