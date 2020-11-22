@@ -7,6 +7,7 @@ import TodoList from './components/Layout/TodoList';
 //import { v4 as uuidv4 } from 'uuid'; //to create random ids
 import './App.css';
 import axios from 'axios';
+import Switch from 'react-bootstrap/esm/Switch';
 
 
 class App extends Component {
@@ -56,17 +57,19 @@ render(){
       <Router>
         <div className="App">
           <Header />
-         
-          {/* me to exact peririsoume to route mono se auto to path*/}
-          <Route exact path='/' render={props => (
+         <Switch>
+          {/* me to exact peririsoume to route mono se auto to path. Dld den epitrepei alla route na emfanizontai se auto
+          Gia to deploy se server xreiazomaste  process.env.PUBLIC_URL  +'/path' gt tha vrisketai se path tou server
+          */}
+          <Route exact path={process.env.PUBLIC_URL + '/'} render={props => (
               <React.Fragment>
                 <AddNewToDo addTodo={this.addTodo}/>
                 {/*Pass todo to the list*/ }
                 <TodoList addTodo={this.state.todo} deleteTodo={this.deleteTodo}/>
               </React.Fragment>
           )} />
-          <Route path="/about" component={About}/>
-          
+          <Route  path={process.env.PUBLIC_URL + '/about'} component={About}/>
+          </Switch>
       </div>
       </Router>
     );

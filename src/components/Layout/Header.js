@@ -4,8 +4,8 @@ const Header = () => {
     return (
         <header  className="text-center" >
         <h1>Todo List</h1>
-        <Link to="/" >Home</Link>|
-                <Link to="/About" >About</Link>
+        <Link to={process.env.PUBLIC_URL + '/'} >Home</Link>|
+                <Link to={process.env.PUBLIC_URL + '/about'} >About</Link>
         </header> 
     )
 }
